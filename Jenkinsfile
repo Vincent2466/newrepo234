@@ -43,7 +43,7 @@ defaultContainer 'shell'
 stages {
 stage('docker build') {
 steps {
-sh 'docker build -t vincent53/myapp .'
+sh 'docker build -t vincent53/myapp:latest .'
 }
 }
 stage('docker login') {
