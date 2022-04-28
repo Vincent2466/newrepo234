@@ -43,17 +43,17 @@ defaultContainer 'shell'
 stages {
 stage('docker build') {
 steps {
-sh 'docker build -t vincent53/myapp .'
+sh 'docker build -t vincent1253/myapp .'
 }
 }
 stage('docker login') {
 steps {
-sh 'docker login -u vincent53 -p Akhil@1999'
+sh 'docker login -u vincent1253 -p Akhil@1999'
 }
 }
 stage('docker push') {
 steps {
-sh 'docker push vincent53/myapp'
+sh 'docker push vincent1253/myapp'
 }
 }
 }
