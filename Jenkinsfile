@@ -41,20 +41,21 @@ defaultContainer 'shell'
 }
 }
 stages {
-    stage('docker build') {
-          steps {
-                 sh 'docker build -t vincent53/myapp .'
-                }
-          }
-    stage('docker login') {
-           steps {
-                 sh 'docker login -u vincent53 -p vincentbabu'
-                  }
-          }
-     stage('docker push') {
-             steps {
-                   sh 'docker push vincent53/myapp'
-                    }
-           }
-     }
+stage('docker build') {
+steps {
+sh 'docker build -t sainikhil1999/myapp .'
 }
+}
+stage('docker login') {
+steps {
+sh 'docker login -u sainikhil1999 -p Akhil@1999'
+}
+}
+stage('docker push') {
+steps {
+sh 'docker push sainikhil1999/myapp'
+}
+}
+}
+}
+
