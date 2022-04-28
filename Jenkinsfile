@@ -48,7 +48,7 @@ sh 'docker build -t vincent53/myapp .'
 }
 stage('docker login') {
 steps {
-sh 'docker login -u vincent53 -p Akhil@1999'
+sh 'docker login -u vincent53 -p vincentbabu'
 }
 }
 stage('docker push') {
@@ -58,4 +58,3 @@ sh 'docker push vincent53/myapp'
 }
 }
 }
-
