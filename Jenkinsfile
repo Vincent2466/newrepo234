@@ -54,9 +54,13 @@ spec:
     stage('docker push') {
         steps {
             sh 'docker push vincent53/myapp'
+           } 
+      }
+       stage('deploy'){
+           step{
+               sh 'kubectl create -f deployment.yaml'
+               sh "kubectl create -f service.yaml"
            }
-    
-   
-}
+       }
   }
 }
