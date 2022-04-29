@@ -55,15 +55,8 @@ spec:
         steps {
             sh 'docker push vincent53/myapp'
            }
-    }stage ('Deploy') {
-           steps {
-               script{
-                   def image_id = registry + ":$BUILD_NUMBER"
-                   sh 'docker deploy.yaml vincent53/myapp'
-               }
-           }
-       }
-   }
+    
+   
 }
   }
 }
