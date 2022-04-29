@@ -58,7 +58,7 @@ spec:
       }
        stage('deploy'){
            step{
-               sh 'kubectl create -f deployment.yaml'
+               sh 'kubectl create -f deployement.yaml'
                sh "kubectl create -f service.yaml"
            }
        }
