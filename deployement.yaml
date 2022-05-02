@@ -1,74 +1,37 @@
 apiVersion: apps/v1
 
-
-
 kind: Deployment
-
-
 
 metadata:
 
-
-
-  name: myapp
-  namespace: jenkins
-
-
+  name: chotu
 
 spec:
 
-
-
   selector:
-
-
 
     matchLabels:
 
-
-
-      run: myapp
-
-
+      run: chotu
 
   replicas: 1
 
-
-
   template:
-
-
 
     metadata:
 
-
-
       labels:
 
-
-
-        run: myapp
-
-
+        run: chotu
 
     spec:
 
-
-
       containers:
 
+      - name: chotu
 
-
-      - name: myapp
-
-
-
-        image: vincent53/myapp
-
-
+        image: vincent53/chotu
 
         ports:
-
-
 
         - containerPort: 5000
