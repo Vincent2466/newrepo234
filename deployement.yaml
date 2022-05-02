@@ -6,8 +6,6 @@ metadata:
 
   name: myapp
   
-  namespace: dev
-
 spec:
 
   selector:
