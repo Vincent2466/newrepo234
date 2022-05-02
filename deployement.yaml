@@ -1,75 +1,20 @@
 apiVersion: apps/v1
-
-
-
 kind: Deployment
-
-
-
 metadata:
-
-
-
-name: hari
-
+name: myapp
 namespace: dev
-
-
-
 spec:
-
-
-
 selector:
-
-
-
 matchLabels:
-
-
-
 run: hari
-
-
-
 replicas: 1
-
-
-
 template:
-
-
-
 metadata:
-
-
-
 labels:
-
-
-
 run: myapp
-
-
-
 spec:
-
-
-
 containers:
-
-
-
 - name: hari
-
-
-
 image: vincent53/myapp
-
-
-
 ports:
-
-
-
 - containerPort: 5000
