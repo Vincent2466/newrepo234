@@ -30,14 +30,6 @@ spec:
 
         image: vincent53/myapp
 
-        resources:
-
-          limits:
-
-            memory: "128Mi"
-
-            cpu: "500m"
-
         ports:
 
-        - containerPort: 80
+        - containerPort: 5000
