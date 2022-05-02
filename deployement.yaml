@@ -1,20 +1,74 @@
 apiVersion: apps/v1
+
+
+
 kind: Deployment
+
+
+
 metadata:
-  name: myapp 
+
+
+
+  name: myapp
   namespace: jenkins
+
+
+
 spec:
+
+
+
   selector:
+
+
+
     matchLabels:
+
+
+
       run: myapp
-    replicas: 1
+
+
+
+  replicas: 1
+
+
+
   template:
+
+
+
     metadata:
+
+
+
       labels:
+
+
+
         run: myapp
+
+
+
     spec:
+
+
+
       containers:
+
+
+
       - name: myapp
-        image: vincent53/myapp
-        ports: 
+
+
+
+        image: vincent53/app
+
+
+
+        ports:
+
+
+
         - containerPort: 5000
