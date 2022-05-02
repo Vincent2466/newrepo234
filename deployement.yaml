@@ -5,6 +5,8 @@ kind: Deployment
 metadata:
 
   name: myapp
+  
+  namespace: dev
 
 spec:
 
@@ -49,6 +51,8 @@ kind: Service
 metadata:
 
   name: myapp
+  
+  namespace: dev
 
 spec:
 
