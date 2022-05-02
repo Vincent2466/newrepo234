@@ -1,12 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp
-
-  namespace: jenkins
-
+  name: chotu
   labels:
-    run: myapp
+    run: chotu
 spec:
   type: NodePort
   ports:
@@ -14,6 +11,6 @@ spec:
     targetPort: 80
     protocol: TCP
     name: http
-
-selector:
-  run: myapp
+ 
+  selector:
+    run: chotu
