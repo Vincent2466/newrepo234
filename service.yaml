@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-name: myapp
+  name: myapp
 
-namespace: dev
+  namespace: jenkins
 
-labels:
-run: myapp
+  labels:
+    run: myapp
 spec:
-type: NodePort
-ports:
-- port: 5000
-targetPort: 80
-protocol: TCP
-name: http
+  type: NodePort
+  ports:
+  - port: 5000
+    targetPort: 80
+    protocol: TCP
+    name: http
 
 selector:
-run: myapp
+  run: myapp
