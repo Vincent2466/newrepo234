@@ -63,7 +63,7 @@ spec:
 
 
 
-        image: vincent53/app
+        image: vincent53/myapp
 
 
 
