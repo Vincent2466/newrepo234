@@ -58,7 +58,7 @@ spec:
       }
        stage('deployement') {
            steps {
-               sh 'kubectl apply -f deployement.yaml'
+              
                sh 'kubectl apply -f service.yaml'
            }
        }
