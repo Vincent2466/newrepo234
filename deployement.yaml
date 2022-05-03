@@ -4,7 +4,7 @@ kind: Deployment
 
 metadata:
 
-  name: hasan
+  name: cent
 
 spec:
 
@@ -12,7 +12,7 @@ spec:
 
     matchLabels:
 
-      run: hasan
+      run: cent
 
   replicas: 1
 
@@ -22,15 +22,15 @@ spec:
 
       labels:
 
-        run: hasan
+        run: cent
 
     spec:
 
       containers:
 
-      - name: hasan
+      - name: cent
 
-        image: vincent53/hasan
+        image: vincent53/cent
 
         ports:
 
