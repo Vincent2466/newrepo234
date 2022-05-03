@@ -43,7 +43,7 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t vincent53/hasan .'
+                sh 'docker build -t vincent53/cent .'
        }
     }
    stage('docker login') {
@@ -53,7 +53,7 @@ spec:
     }
     stage('docker push') {
         steps {
-            sh 'docker push vincent53/hasan'
+            sh 'docker push vincent53/cent'
            } 
       }
        stage('deployement') {
