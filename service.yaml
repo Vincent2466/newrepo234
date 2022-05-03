@@ -13,4 +13,4 @@ spec:
     name: http
  
   selector:
-    run: centy
+    run: cent
