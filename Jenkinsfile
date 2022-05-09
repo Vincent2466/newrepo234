@@ -16,7 +16,7 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: registry.glams.com/glams/jenkins-agent:latest
+    image: anandsadhu/dotnet-jenkins-slave:latest
     command:
     - sleep
     args:
