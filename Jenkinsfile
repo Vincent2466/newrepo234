@@ -56,6 +56,13 @@ spec:
             sh 'docker push vincent53/cent'
            } 
       }
-       
+        stage('helm') {
+           steps {
+               sh 'helm version'
+               sh 'helm upgrade --install dotnet1 dotnet-app'
+ 
+             
+           }
+       }
          }
         }
