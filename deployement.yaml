@@ -30,7 +30,7 @@ spec:
 
       - name: cent
 
-        image: anandsadhu/dotnet-jenkins-slave
+        image: vincent53/cent
 
         ports:
 
