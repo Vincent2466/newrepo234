@@ -16,7 +16,7 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: registry.glams.com/glams/jenkins-agent:latest
+    image: anandsadhu/dotnet-jenkins-slave
     command:
     - sleep
     args:
@@ -43,18 +43,33 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t vincent53/myapp .'
+                sh 'docker build -t vincent53/demoapp .'
        }
     }
    stage('docker login') {
        steps {
-            sh 'docker login -u vincent53 -p vincentbabu'
+            sh 'docker login -u vincent563 -p vincentbabu'
         }
     }
     stage('docker push') {
         steps {
-            sh 'docker push vincent53/myapp'
+            sh 'docker push vincent53/demoapp'
            }
     }
+     stage("install helm"){
+       steps {
+         sh 'curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3'
+         sh 'chmod 700 get_helm.sh'
+         sh './get_helm.sh'
+           }
+        }
+       stage('helm') {
+           steps {
+               sh 'helm version'
+               sh 'helm upgrade --install dotnet1 test-app'
+ 
+             
+           }
+       }
+     }
   }
-}
