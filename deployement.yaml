@@ -5,6 +5,7 @@ kind: Deployment
 metadata:
 
   name: cent
+  namspace: jenkins
 
 spec:
 
