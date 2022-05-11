@@ -1,4 +1,3 @@
-// Uses Declarative syntax to run commands inside a container.
 pipeline {
     agent {
         kubernetes {
@@ -16,7 +15,7 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: anandsadhu/dotnet-jenkins-slave:latest
+    image: anandsadhu/dotnet-jenkins-slave
     command:
     - sleep
     args:
@@ -43,20 +42,20 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t vincent53/cent .'
+                sh 'docker build -t vincent53/demoapp .'
        }
     }
    stage('docker login') {
        steps {
-            sh 'docker login -u vincent53 -p vincentbabu'
+            sh 'docker login -u vincent563 -p vincentbabu'
         }
     }
     stage('docker push') {
         steps {
-            sh 'docker push vincent53/cent'
-           } 
-      }
-       stage("install helm"){
+            sh 'docker push vincent53/demoapp'
+           }
+    }
+     stage("install helm"){
        steps {
          sh 'curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3'
          sh 'chmod 700 get_helm.sh'
@@ -66,7 +65,7 @@ spec:
        stage('helm') {
            steps {
                sh 'helm version'
-               sh 'helm upgrade --install dotnet1 dotnet-app'
+               sh 'helm upgrade --install dotnet1 test-app'
  
              
            }
