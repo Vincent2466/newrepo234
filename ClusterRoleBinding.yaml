@@ -22,4 +22,4 @@ subjects:
 
   kind: Group
 
-  name: system:serviceaccounts:jenkins
+  name: system:serviceaccounts:default
